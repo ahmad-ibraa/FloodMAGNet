@@ -1,0 +1,14 @@
+numpy
+pandas
+geopandas
+rasterio
+rasterstats
+networkx
+shapely
+scikit-learn
+scipy
+torch
+torch-geometric
+matplotlib
+joblib
+pyarrow
