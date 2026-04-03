@@ -63,10 +63,12 @@ __Download libraries noted in *requirements.txt*__
 ### Graph Construction
 - Compile and organize data for each watershed to be evaluated.
 - Update directories within the Graph Construction script.
-- Update high-occupancy parameters to match needs and area of interest.
+- Update high-occupancy parameters to match needs and area of interest. For New Jersey, MOD-IV parameters can be found here: https://www.nj.gov/treasury/taxation/pdf/lpt/modIVmanual.pdf
 - Run the Graph Construction script for each watershed, ensure saved artifacts are named appropriately.
+- Modify the KNN distance threshold if using a metric-based projection system. The evaluated CRS is measured in feet.
 
 ### Model Training and Testing
 - Similarly update directories within the script. Rainfall data must have uniform temporal resolution.
 - Update training and testing rainfall scenarios. It is preferred to keep synthetic storms (2Y-100Y, 100Y-2Y) within training subset as per the study findings.
+- Update the *unit* variable: the code predefined the conversion for meters in loss calculation - additional logic statements are necessary for different depth units.
 - The model should now be ready for training and evaluation. IWMSE hyperparameters may need watershed-specific tuning.
